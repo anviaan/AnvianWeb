@@ -1,0 +1,27 @@
+name: Validate
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run check
+      - run: npm run build
+      - run: node scripts/smoke.mjs
+      - run: docker build -t anvian-web .
+      - run: |
+          docker run -d --name web -p 8080:80 anvian-web
+          sleep 3
+          curl --fail http://localhost:8080/projects/
+          test "$(curl -s -o /dev/null -w '%{http_code}' -H 'Host: blog.anvian.net' http://localhost:8080/posts/mcmodtest/)" = 301

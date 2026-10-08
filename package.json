@@ -1,0 +1,31 @@
+{
+  "name": "anvian-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "node --test scripts/*.test.mjs",
+    "sync": "node scripts/sync.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource-variable/space-grotesk": "^5.2.0",
+    "astro": "^7.3.7",
+    "mermaid": "^12.1.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "katex": "^0.19.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

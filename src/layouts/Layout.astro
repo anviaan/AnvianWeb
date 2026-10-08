@@ -1,0 +1,13 @@
+---
+import '@fontsource-variable/space-grotesk';
+import '../styles/global.css';
+interface Props {title?:string;description?:string;image?:string}
+const {title='Anvian — Minecraft, made a little different.',description='Explore Minecraft mods, modpacks and experiments by Anvian.',image='/images/mcmodtest/mcmodtest.png'}=Astro.props;
+const canonical=new URL(Astro.url.pathname,Astro.site);
+---
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><link rel="icon" href="/favicon.ico"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL(image||'/favicon.png',Astro.site)}/><meta name="twitter:card" content="summary_large_image"/><link rel="alternate" type="application/rss+xml" title="Anvian’s Blog" href="/rss.xml"/></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header"><a class="brand" href="/" aria-label="Anvian home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 27 13 5h6l10 22h-8l-5-13-5 13Z" fill="currentColor"/></svg>Anvian<span class="brand-dot">.</span></a><nav aria-label="Main navigation">{[['/','Home'],['/projects/','Projects'],['/blog/','Blog']].map(([url,label])=><a href={url} aria-current={Astro.url.pathname===url?'page':undefined}>{label}</a>)}<a href="/#about">About</a></nav></header>
+<main id="main"><slot/></main>
+<footer><a class="brand" href="/">Anvian.</a><p>Made for a world worth exploring.</p><div><a href="https://github.com/anviaan">GitHub</a><a href="https://modrinth.com/user/anvian">Modrinth</a><a href="https://www.curseforge.com/members/anvian/projects">CurseForge</a><a href="https://x.com/carbajal_andre">X</a><a href="/rss.xml">RSS</a></div><small>Not affiliated with Mojang Studios or Microsoft.</small></footer>
+</body></html>

@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Project from '../components/Project.astro';
+import {projects} from '../data/catalog';
+import {getCollection} from 'astro:content';
+const posts=(await getCollection('blog',p=>!p.data.draft)).sort((a,b)=>b.data.date.getTime()-a.data.date.getTime());
+const visual=projects.find(p=>p.id==='simple-mango');
+---
+<Layout image={visual?.image??undefined}>
+<section class="hero"><div class="hero-copy"><h1>A little change.<br/>A whole new<br/><em>adventure.</em></h1><p>Mods, modpacks, and small ideas that make Minecraft feel like your world.</p><a class="button" href="/projects/">Explore the projects <span aria-hidden="true">↗</span></a></div><div class="hero-art">{visual?.image&&<img src={visual.image} alt="Mango trees and new wood blocks from Simple Mango in Minecraft" fetchpriority="high"/>}<div class="image-caption"><span>In the world of</span><strong>Simple Mango</strong><a href={visual?.sources.modrinth?.url}>Discover the mod ↗</a></div></div></section>
+<section class="section"><div class="section-title"><div><h2>Small details. Big possibilities.</h2><p>A few things I’ve been building.</p></div><a class="text-link" href="/projects/">All projects ↗</a></div><div class="project-grid">{projects.filter(p=>p.featured).map(p=><Project project={p}/>)}</div></section>
+<section class="section journal"><div class="section-title"><div><h2>From the workbench.</h2><p>Notes on modding, development, and figuring things out.</p></div><a class="text-link" href="/blog/">Read the blog ↗</a></div>{posts.slice(0,3).map(p=><a class="post-row" href={`/blog/${p.id}/`}><time datetime={p.data.date.toISOString()}>{p.data.date.toLocaleDateString('en',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'})}</time><div><h3>{p.data.title}</h3><p>{p.data.description}</p></div><span aria-hidden="true">↗</span></a>)}</section>
+<section class="section about" id="about"><h2>Hi, I’m Anvian.</h2><div><p>I build Minecraft mods, tools, and experiments. Sometimes it’s a new tree. Sometimes it’s a better way to test a mod. There’s always something else to explore.</p><p>You can find my projects and follow what I’m working on here.</p><div class="community"><a href="https://github.com/anviaan">GitHub ↗</a><a href="https://modrinth.com/user/anvian">Modrinth ↗</a><a href="https://www.curseforge.com/members/anvian/projects">CurseForge ↗</a><a href="https://x.com/carbajal_andre">X ↗</a></div></div></section>
+</Layout>

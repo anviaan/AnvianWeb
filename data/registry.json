@@ -1,0 +1,159 @@
+[
+  {
+    "id": "record-days-survived",
+    "modrinthId": "CJC1Uvdj",
+    "featured": false,
+    "curseforgeId": 896213,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/record-days-survived"
+  },
+  {
+    "id": "createandspace",
+    "modrinthId": "ItIhxk5J",
+    "featured": true,
+    "curseforgeId": 872690,
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/modpacks/createandspace",
+    "mappingEvidence": "CreateAndSpace/.github/workflows/release.yml:187 and README.md:7",
+    "github": "https://github.com/anviaan/CreateAndSpace"
+  },
+  {
+    "id": "sutvive-to-zombies-2",
+    "modrinthId": "GXmSF7VW",
+    "featured": false,
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/modpacks/survive-to-zombies-2",
+    "curseforgeId": 1111287,
+    "mappingEvidence": "CurseForge public project page; same owner, description and Modrinth-hosted banner"
+  },
+  {
+    "id": "glow-ink-plus",
+    "modrinthId": "DfZhZ0LX",
+    "featured": false,
+    "curseforgeId": 651887,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/glow-ink-plus"
+  },
+  {
+    "id": "usedtotemmessage",
+    "modrinthId": "euYgUV5u",
+    "featured": false,
+    "curseforgeId": 1559253,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/usedtotemmessage"
+  },
+  {
+    "id": "inventorytweak",
+    "modrinthId": "jGVzcXaf",
+    "featured": false,
+    "curseforgeId": 1068451,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/inventorytweak"
+  },
+  {
+    "id": "sodium-extra-information",
+    "modrinthId": "696WgnvT",
+    "featured": false,
+    "curseforgeId": 1073022,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra-information"
+  },
+  {
+    "id": "anvians-lib",
+    "modrinthId": "PuTjrq4T",
+    "featured": false,
+    "curseforgeId": 1168509,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/anvians-lib"
+  },
+  {
+    "id": "electric-mace",
+    "modrinthId": "9ksojQLy",
+    "featured": false,
+    "curseforgeId": 987634,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/electric-mace"
+  },
+  {
+    "id": "worldremover",
+    "modrinthId": "wcA7KcYx",
+    "featured": false,
+    "type": "datapack"
+  },
+  {
+    "id": "-sculk-horn",
+    "modrinthId": "BfFhIqA7",
+    "featured": false,
+    "curseforgeId": 636227,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/sculk-horn"
+  },
+  {
+    "id": "-bedrock-plus",
+    "modrinthId": "pdjxnvXe",
+    "featured": false,
+    "curseforgeId": 585068,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/bedrock-pus"
+  },
+  {
+    "id": "simple-mango",
+    "modrinthId": "WaggvUE7",
+    "featured": true,
+    "curseforgeId": 573934,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "image": "https://cdn.modrinth.com/data/WaggvUE7/images/507cac2457919bbd3c8564c014d114c540308662.png",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/simple-mango"
+  },
+  {
+    "id": "chiseled-bookshelf-visualizer",
+    "modrinthId": "SQeCtvGg",
+    "featured": true,
+    "curseforgeId": 913857,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/chiseled-bookshelf-visualizer"
+  },
+  {
+    "id": "go-fish-rehooked",
+    "modrinthId": "nGvPJWKu",
+    "featured": true,
+    "curseforgeId": 1667264,
+    "mappingEvidence": "Publishing workflow in .github/workflows/mod_publis.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/go-fish-rehooked"
+  },
+  {
+    "id": "morebeeinfo",
+    "modrinthId": "N2XKPu4u",
+    "featured": false,
+    "curseforgeId": 659496,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/morebeeinfo"
+  },
+  {
+    "id": "create_unbreakable",
+    "modrinthId": "bzzq7Auj",
+    "featured": false,
+    "curseforgeId": 963802,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/create-unbreakable-tools"
+  },
+  {
+    "id": "exploitation-timer",
+    "modrinthId": "f3TCgy6a",
+    "featured": false,
+    "curseforgeId": 1108783,
+    "mappingEvidence": "Publishing workflow in .github/workflows/fabric_publish.yml",
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/mc-mods/exploitation-timer"
+  },
+  {
+    "id": "perfume-mod",
+    "modrinthId": "J5eO7G9B",
+    "featured": false
+  },
+  {
+    "id": "sculkhorn3d",
+    "modrinthId": "pPdRHBeF",
+    "featured": false,
+    "curseforgeUrl": "https://www.curseforge.com/minecraft/texture-packs/sculkhorn3d",
+    "curseforgeId": 987547,
+    "mappingEvidence": "CurseForge project page ID 987547; author and shared Modrinth gallery image"
+  }
+]

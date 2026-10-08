@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {getCollection} from 'astro:content';
+const posts=(await getCollection('blog',p=>!p.data.draft)).sort((a,b)=>b.data.date.getTime()-a.data.date.getTime());
+---
+<Layout title="Blog — Anvian"><section class="section page-top"><h1>From the<br/><em>workbench.</em></h1><p>Development, mods, games, and whatever catches my attention.</p><div class="blog-list">{posts.map(p=><a class="post-row" href={`/blog/${p.id}/`}>{p.data.image&&<img src={'/'+p.data.image.replace(/^\//,'')} alt="" width="240" height="140" loading="lazy"/>}<div><time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0,10)}</time><h2>{p.data.title}</h2><p>{p.data.description}</p></div><span aria-hidden="true">↗</span></a>)}</div></section></Layout>

@@ -1,0 +1,494 @@
+[
+  {
+    "id": "record-days-survived",
+    "name": "Record Days Survived",
+    "description": "This Minecraft mod challenges you to keep track of how many days you survive without dying - can you reach a record number of days alive before falling to the dangers of the world?",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/CJC1Uvdj/deaf0781655b2aff1e92afd70418956ec82bb7b5_96.webp",
+    "image": null,
+    "github": "https://github.com/anviaan/Record-Days-Survived",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/record-days-survived",
+        "downloads": 18621,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/record-days-survived"
+    }
+  },
+  {
+    "id": "createandspace",
+    "name": "Create And Space",
+    "description": "Experience survival with Create mod, with the possibility to go to space with Ad Astra at Fabric.",
+    "type": "modpack",
+    "icon": "https://cdn.modrinth.com/data/ItIhxk5J/3422f1753ea259ff461e8ef41dace41fe544f3f6_96.webp",
+    "image": null,
+    "github": "https://github.com/anviaan/CreateAndSpace",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/modpack/createandspace",
+        "downloads": 71844,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/modpacks/createandspace"
+    }
+  },
+  {
+    "id": "sutvive-to-zombies-2",
+    "name": "Sutvive To Zombies 2",
+    "description": "Fight for your life in a very complicated zombie apocalypse",
+    "type": "modpack",
+    "icon": "https://cdn.modrinth.com/data/GXmSF7VW/56959d5156b9667615fb22cc81ea2dcf2d456495_96.webp",
+    "image": "https://cdn.modrinth.com/data/GXmSF7VW/images/832f84dfe8b99a06ae2d698e9358cff1ea988a78_350.webp",
+    "github": null,
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/modpack/sutvive-to-zombies-2",
+        "downloads": 882,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/modpacks/survive-to-zombies-2"
+    }
+  },
+  {
+    "id": "glow-ink-plus",
+    "name": "Glow Ink Plus",
+    "description": "Add more functions to the glow ink, in this mod you can make the wool and carpets glow ",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/DfZhZ0LX/3672dc199f2a0143dca60e9a5b5a8c0e50e695a1_96.webp",
+    "image": "https://cdn.modrinth.com/data/DfZhZ0LX/images/f560ac576417ab1674de4308781a4dbb38811ee3_350.webp",
+    "github": "https://github.com/anviaan/GlowInkPlus",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/glow-ink-plus",
+        "downloads": 67151,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/glow-ink-plus"
+    }
+  },
+  {
+    "id": "usedtotemmessage",
+    "name": "UsedTotemMessage",
+    "description": "Automatically detects when a player uses a Totem of Undying and sends a notification to all connected players.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/euYgUV5u/9d97ad88ab999128b87e5dbe2affb6efc27f7534_96.webp",
+    "image": "https://cdn.modrinth.com/data/euYgUV5u/images/5546004d681511a98cda6e76c71f0f08aee9066d_350.webp",
+    "github": "https://github.com/anviaan/UsedTotemMessage",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/usedtotemmessage",
+        "downloads": 127,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/usedtotemmessage"
+    }
+  },
+  {
+    "id": "inventorytweak",
+    "name": "InventoryTweak",
+    "description": "Fast and easy inventory sorter",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/jGVzcXaf/58b4b2d23eca5c02bbb433f07b183c7604771ae6.png",
+    "image": null,
+    "github": "https://github.com/anviaan/InventoryTweak",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/inventorytweak",
+        "downloads": 143510,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/inventorytweak"
+    }
+  },
+  {
+    "id": "sodium-extra-information",
+    "name": "Sodium Extra Information",
+    "description": "A Sodium Extra addon that adds more in-game information.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/696WgnvT/410287c4b17a1ee494689368e9d1ced47716a05b_96.webp",
+    "image": "https://cdn.modrinth.com/data/696WgnvT/images/0b4d5884a7621a8cb90ac1a17f36329bd6b1935d_350.webp",
+    "github": "https://github.com/anviaan/SodiumExtraInformation",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/sodium-extra-information",
+        "downloads": 706147,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra-information"
+    }
+  },
+  {
+    "id": "anvians-lib",
+    "name": "Anvian's Lib",
+    "description": "A small utility library for Anvian's mods.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/PuTjrq4T/c6e7d1eb6d92cb697d858967cf0cfca88aef6fbc.png",
+    "image": null,
+    "github": "https://github.com/anviaan/Anvian-sLib",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/anvians-lib",
+        "downloads": 1026151,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/anvians-lib"
+    }
+  },
+  {
+    "id": "electric-mace",
+    "name": "Electric Mace",
+    "description": "Adds the possibility of enchanting the new Mace with Channeling so that when we hit a mob from above it will be struck by lightning if it thunders.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/9ksojQLy/275f9f2d28d30c6cbfe35b9b73a13636d03583bf.png",
+    "image": null,
+    "github": "https://github.com/anviaan/ElectricMace",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/electric-mace",
+        "downloads": 38479,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/electric-mace"
+    }
+  },
+  {
+    "id": "worldremover",
+    "name": "WorldRemover",
+    "description": "This Datapack will help you to remove terrain from your world, while you are moving, leaving the Ores.",
+    "type": "datapack",
+    "icon": "https://cdn.modrinth.com/data/wcA7KcYx/e0989aa1b95d041f2c416a2118d021141e960628_96.webp",
+    "image": "https://cdn.modrinth.com/data/wcA7KcYx/images/11aa291d591b366922075b7cfb01b164e341da5e_350.webp",
+    "github": "https://github.com/anviaan/WorldRemoverDataPack",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/worldremover",
+        "downloads": 435,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth"
+    ]
+  },
+  {
+    "id": "-sculk-horn",
+    "name": " Sculk Horn",
+    "description": "Creates an area or distance sonic attack with 2 new horns.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/BfFhIqA7/53592adb7302cf09e70d2553f000b8d29815eabc.png",
+    "image": "https://cdn.modrinth.com/data/BfFhIqA7/images/09f01d901e8329f0630e6a91cce04c1ff8787ce1_350.webp",
+    "github": "https://github.com/anviaan/SculkHorn",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/-sculk-horn",
+        "downloads": 246992,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/sculk-horn"
+    }
+  },
+  {
+    "id": "-bedrock-plus",
+    "name": " Bedrock Plus",
+    "description": "Adds a new variant of bedrock, which can be combined with netherite armor.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/pdjxnvXe/9db2c5fc2c81ab70b15e16fa18e579138ad0639b.png",
+    "image": "https://cdn.modrinth.com/data/pdjxnvXe/images/3decd0c5d15cb431fc99935d42c0478042f48ca3.png",
+    "github": "https://github.com/anviaan/BedrockPlus",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/-bedrock-plus",
+        "downloads": 59392,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/bedrock-pus"
+    }
+  },
+  {
+    "id": "simple-mango",
+    "name": "Simple Mango",
+    "description": "Add a new tree with a new type of wood and food ",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/WaggvUE7/b1d54f4ff9291488bef164ca53e27e97548397f9.png",
+    "image": "https://cdn.modrinth.com/data/WaggvUE7/images/507cac2457919bbd3c8564c014d114c540308662.png",
+    "github": "https://github.com/anviaan/SimpleMango",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/simple-mango",
+        "downloads": 18114,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/simple-mango"
+    }
+  },
+  {
+    "id": "chiseled-bookshelf-visualizer",
+    "name": "Chiseled Bookshelf Visualizer",
+    "description": "Visually displays the contents of the chiseled Bookshelves.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/SQeCtvGg/76900347c7e018b9eeaabbaf308e05de647156d1.png",
+    "image": "https://cdn.modrinth.com/data/SQeCtvGg/images/2179f11fadfa6a59b49999d83e1c286768e3978a_350.webp",
+    "github": "https://github.com/anviaan/Chiseled-Bookshelf-Visualizer",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/chiseled-bookshelf-visualizer",
+        "downloads": 1424488,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/chiseled-bookshelf-visualizer"
+    }
+  },
+  {
+    "id": "go-fish-rehooked",
+    "name": "Go Fish Rehooked",
+    "description": "Go Fish is a fishing expansion for Minecraft that turns fishing into a dimension-spanning progression system",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/nGvPJWKu/d0803fa7107f0aa12abec4cf03b434ba733a41e5_96.webp",
+    "image": "https://cdn.modrinth.com/data/nGvPJWKu/images/25dd2c1d4806a675818d7677149e6d5452f33ec7_350.webp",
+    "github": "https://github.com/anviaan/GoFishRehooked",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/go-fish-rehooked",
+        "downloads": 335,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/go-fish-rehooked"
+    }
+  },
+  {
+    "id": "morebeeinfo",
+    "name": "MoreBeeInfo",
+    "description": "Client-side Mod that adds the number of bees and the level of honey in the bee nest and the hive",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/N2XKPu4u/a0e353c69831738121603e395e980590d96a858f_96.webp",
+    "image": "https://cdn.modrinth.com/data/N2XKPu4u/images/1179bea6c554a6e6aac28ec3c7156c4c190dae9f_350.webp",
+    "github": "https://github.com/anviaan/MoreBeeInfo",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/morebeeinfo",
+        "downloads": 192700,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/morebeeinfo"
+    }
+  },
+  {
+    "id": "create_unbreakable",
+    "name": "Create: Unbreakable Tools",
+    "description": "This is an addon mod for Create that provides a way to make your tools unbreakable.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/bzzq7Auj/88876320e89e4263f88f33f66efb3489ab43339b_96.webp",
+    "image": "https://cdn.modrinth.com/data/bzzq7Auj/images/86df23a7819d80216a5514c2c4fd49f1b567620f.png",
+    "github": "https://github.com/anviaan/CreateUnbreakableTools",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/create_unbreakable",
+        "downloads": 154101,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/create-unbreakable-tools"
+    }
+  },
+  {
+    "id": "exploitation-timer",
+    "name": "Exploitation Timer",
+    "description": "A multiloader mod that displays the time at which TNT will explode.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/f3TCgy6a/8c10f0fa6a5fb9b2ec6529f6c741ad6e7dac3772.png",
+    "image": "https://cdn.modrinth.com/data/f3TCgy6a/images/4b7ee1024dd0c50c66ca63afb740fdf325231c74.gif",
+    "github": "https://github.com/anviaan/Exploitation-Timer",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/exploitation-timer",
+        "downloads": 11706,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/exploitation-timer"
+    }
+  },
+  {
+    "id": "perfume-mod",
+    "name": "Perfume Mod",
+    "description": "Add perfumes which will give you a pleasant scent for the mobs and make them follow you.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/J5eO7G9B/2c7d4383bee6e3ab59280cf5b4f85b04a9b7edf3_96.webp",
+    "image": null,
+    "github": "https://github.com/anviaan/Perfume-Mod",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/perfume-mod",
+        "downloads": 253,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth"
+    ]
+  },
+  {
+    "id": "sculkhorn3d",
+    "name": "SculkHorn3D",
+    "description": "A texture pack for the Sculk Horn mod to make the Sculk horns 3D",
+    "type": "resourcepack",
+    "icon": "https://cdn.modrinth.com/data/pPdRHBeF/7dda406a81a0dd8120cd1639f118d2acbc7f459a.png",
+    "image": "https://cdn.modrinth.com/data/pPdRHBeF/images/aa3ea41589591ddcdbd9e88521342a6d6329a44a_350.webp",
+    "github": null,
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/resourcepack/sculkhorn3d",
+        "downloads": 1308,
+        "updatedAt": "2026-10-08T04:23:00.592Z",
+        "stale": false
+      }
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "platformLinks": {
+      "curseforge": "https://www.curseforge.com/minecraft/texture-packs/sculkhorn3d"
+    }
+  }
+]
