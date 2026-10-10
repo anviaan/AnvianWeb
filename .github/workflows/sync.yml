@@ -18,12 +18,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Fetch official platform data
+      - name: Fetch n8n counts from Notion
         id: sync
         continue-on-error: true
         run: npm run sync
         env:
-          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ vars.NOTION_DATA_SOURCE_ID }}
       - run: npm test && npm run check && npm run build && node scripts/smoke.mjs
       - name: Commit the usable snapshot
         id: commit

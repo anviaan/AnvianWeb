@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
 import {projects,total} from '../data/catalog';
-const sorted=[...projects].sort((a,b)=>total(b)-total(a));
+const sorted=[...projects].sort((a,b)=>Number(!!a.archived)-Number(!!b.archived)||total(b)-total(a));
 ---
 <Layout title="Projects — Anvian"><section class="section page-top"><h1>Find your next<br/><em>little adventure.</em></h1><p>Mods, packs, and experiments. Pick something that makes your world yours.</p>
 <form class="filters" role="search"><label>Search projects<input id="search" type="search" placeholder="Search by name…"/></label><label>Project type<select id="type"><option value="">All projects</option><option value="mod">Mods</option><option value="modpack">Modpacks</option><option value="resourcepack">Resource packs</option><option value="datapack">Datapacks</option></select></label><label>Sort by<select id="sort"><option value="downloads">Most downloaded</option><option value="name">Name A–Z</option></select></label></form>
@@ -10,6 +10,6 @@ const sorted=[...projects].sort((a,b)=>total(b)-total(a));
 <script>
 const search=document.querySelector<HTMLInputElement>('#search')!,type=document.querySelector<HTMLSelectElement>('#type')!,sort=document.querySelector<HTMLSelectElement>('#sort')!,catalog=document.querySelector<HTMLElement>('#catalog')!;
 const cards=Array.from(catalog.querySelectorAll<HTMLElement>('.project'));
-function update(){let visible=0;cards.sort((a,b)=>sort.value==='name'?(a.dataset.name??'').localeCompare(b.dataset.name??''):Number(b.dataset.downloads)-Number(a.dataset.downloads));for(const card of cards){card.hidden=!(card.dataset.name?.includes(search.value.trim().toLowerCase())&&(!type.value||card.dataset.type===type.value));if(!card.hidden)visible++;catalog.append(card);}document.querySelector('#results')!.textContent=`${visible} ${visible===1?'project':'projects'}`;document.querySelector<HTMLElement>('#empty')!.hidden=visible>0;}
+function update(){let visible=0;cards.sort((a,b)=>Number(a.dataset.archived==='true')-Number(b.dataset.archived==='true')||(sort.value==='name'?(a.dataset.name??'').localeCompare(b.dataset.name??''):Number(b.dataset.downloads)-Number(a.dataset.downloads)));for(const card of cards){card.hidden=!(card.dataset.name?.includes(search.value.trim().toLowerCase())&&(!type.value||card.dataset.type===type.value));if(!card.hidden)visible++;catalog.append(card);}document.querySelector('#results')!.textContent=`${visible} ${visible===1?'project':'projects'}`;document.querySelector<HTMLElement>('#empty')!.hidden=visible>0;}
 search.addEventListener('input',update);type.addEventListener('change',update);sort.addEventListener('change',update);document.querySelector('form')!.addEventListener('submit',e=>e.preventDefault());
 </script>

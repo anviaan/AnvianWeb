@@ -25,6 +25,10 @@ resources:
       url: "https://github.com/anviaan/GoFishRehooked"
 ---
 
+## Resources used in this article
+
+The following projects are used in the examples and testing described in this article:
+
 - [mcmodtest](https://gitlab.com/anvian/mcmodtest)
 - [mcmodtestbridge](https://gitlab.com/anvian/mcmodtestbridge)
 - [GoFishRehooked](https://github.com/anviaan/GoFishRehooked)

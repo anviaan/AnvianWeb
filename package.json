@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "test": "node --test scripts/*.test.mjs",
-    "sync": "node scripts/sync.mjs"
+    "sync": "node --env-file-if-exists=.env scripts/sync.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.19",

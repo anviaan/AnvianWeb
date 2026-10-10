@@ -5,10 +5,10 @@ const {project:p}=Astro.props;
 const sources=Object.entries(p.sources);
 const links={...p.platformLinks,...Object.fromEntries(sources.map(([name,s])=>[name,s.url]))};
 ---
-<article class="project" data-name={p.name.toLowerCase()} data-type={p.type} data-downloads={total(p)}>
-<div class="project-heading">{p.icon&&<img src={p.icon} alt="" width="56" height="56" loading="lazy"/>}<div><span class="type">{labels[p.type]??p.type}</span><h3>{p.name}</h3></div></div>
+<article class="project" data-name={p.name.toLowerCase()} data-type={p.type} data-archived={p.archived?'true':'false'} data-downloads={total(p)}>
+<div class="project-heading">{p.icon&&<img src={p.icon} alt="" width="56" height="56" loading="lazy"/>}<div><span class="type">{labels[p.type]??p.type}</span><h3>{p.name}</h3>{p.archived&&<span class="archived-badge">Archived</span>}</div></div>
 <p class="project-description">{p.description}</p>
 {p.id==='anvians-lib'&&<p class="telemetry-note">Includes telemetry for mod and Minecraft versions and loader usage. <a href="https://telemetry.anvian.net/">Privacy notice and how to disable telemetry ↗</a></p>}
-<div class="download"><strong>{count(total(p))}</strong> downloads {partial(p)&&<span class="status">· partial total</span>}{Object.values(p.sources).some(s=>s.stale)&&<span class="status"> · last known counts</span>}</div>
+<div class="download"><strong>{count(total(p))}</strong> downloads {partial(p)&&<span class="status">· partial total</span>}{(p.reportedDownloads?.stale??Object.values(p.sources).some(s=>s.stale))&&<span class="status"> · last known counts</span>}</div>
 <div class="project-links">{Object.entries(links).map(([name,url])=><a href={url} aria-label={`${p.name} on ${name}`}><img class="platform-icon" src={`/icons/${name}.svg`} alt="" width="16" height="16"/>{name==='modrinth'?'Modrinth':'CurseForge'} <span aria-hidden="true">↗</span></a>)}{p.github&&<a href={p.github} aria-label={`${p.name} source on GitHub`}><img class="platform-icon" src="/icons/github.svg" alt="" width="16" height="16"/>GitHub <span aria-hidden="true">↗</span></a>}</div>
 </article>

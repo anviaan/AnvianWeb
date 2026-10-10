@@ -1,3 +1,4 @@
+import {syncNotion} from './notion.mjs';
 import {readFile,writeFile,rename} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 const root=new URL('../',import.meta.url);
@@ -19,7 +20,7 @@ export function updateSource(old,name,fresh,now){
  else if(sources[name])sources[name].stale=true;
  return sources;
 }
-export async function sync(fetcher=fetch, directory=root, apiKey=process.env.CURSEFORGE_API_KEY){
+export async function sync(fetcher=fetch, directory=root, apiKey=undefined){
  const root=directory;
  const registry=JSON.parse(await readFile(new URL('data/registry.json',root),'utf8'));
  const previous=JSON.parse(await readFile(new URL('src/data/projects.json',root),'utf8'));
@@ -56,4 +57,4 @@ export async function sync(fetcher=fetch, directory=root, apiKey=process.env.CUR
  await writeFile(new URL('data/registry.json',root),JSON.stringify(registry,null,2)+'\n');
  console.log('Synced '+output.length+' projects; '+failures+' unavailable sources.');return failures;
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)sync().then(f=>{if(f)process.exitCode=1;}).catch(()=>{console.error('Sync failed; inspect registry and platform availability.');process.exitCode=1;});
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href)syncNotion().then(f=>{if(f)process.exitCode=1;}).catch(()=>{console.error('Sync failed; inspect registry and platform availability.');process.exitCode=1;});

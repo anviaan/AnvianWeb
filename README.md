@@ -81,3 +81,31 @@ Expect permanent redirects to the corresponding canonical `anvian.net` URLs and 
 Mermaid is used only for the migrated article’s flowcharts. KaTeX is overridden to its patched 0.19 release to avoid an advisory in Mermaid’s older transitive version.
 
 Local build and container checks are separate from production readiness. CurseForge live counts require your API key. Daily end-to-end automation requires GitHub secrets and a real Dokploy application. Do not claim production deployment or change the old blog/DNS until those checks pass.
+
+## Notion / n8n download synchronization
+
+`npm run sync` now reads Game Projects through the official Notion API. It does
+not call CurseForge or require `CURSEFORGE_API_KEY`. Keep that credential in n8n.
+Configure GitHub secret `NOTION_TOKEN` with a read-only integration shared only
+with Game Projects, and Actions variable `NOTION_DATA_SOURCE_ID`:
+`b9afc51f-cce1-4059-a95d-db22c635081b`.
+The chat Notion connection is not a credential for unattended Actions.
+
+The n8n flow writes `Downloads` (already combined), `ModrinthDownloads`,
+`CurseForgeDownloads`, `ModrinthUpdatedAt`, `CurseForgeUpdatedAt`,
+and `DownloadsStatus` (`current`, `stale`, `partial`). The combined total is never
+added to platform counts. Missing source baselines and counts older than 48 hours
+are labeled conservatively. A Notion request/schema/mapping failure retains the
+snapshot; unmatched projects retain previous counts marked stale. No private page
+body or Notion attachment URL is published.
+
+This migration currently matches existing editorial entries by explicit platform
+IDs. New projects still require `data/registry.json` and initial public metadata;
+Notion publication controls/new-project editorial import are not yet implemented.
+Historical platform importer remains available as a tested helper, not the scheduled
+entry point. Earlier setup instructions mentioning a website CurseForge secret are
+superseded by this section. Do not remove the n8n CurseForge credential.
+
+Validate the imported n8n workflow first, then run `npm run sync` using the dedicated
+Notion token. Verify a real GitHub run and Dokploy deploy before considering daily
+updates operational. This change does not configure remote secrets or deploy.
