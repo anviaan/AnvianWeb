@@ -1,3 +1,4 @@
+export {};
 const {DOKPLOY_URL:url,DOKPLOY_API_KEY:key,DOKPLOY_APPLICATION_ID:id}=process.env;
 if(!url||!key||!id){console.error('Configure DOKPLOY_URL, DOKPLOY_API_KEY and DOKPLOY_APPLICATION_ID as repository secrets.');process.exit(1);}
 const endpoint=new URL('/api/application.deploy',url);

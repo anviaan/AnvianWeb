@@ -18,7 +18,7 @@ jobs:
       - run: npm test
       - run: npm run check
       - run: npm run build
-      - run: node scripts/smoke.mjs
+      - run: node scripts/smoke.ts
       - run: docker build -t anvian-web .
       - run: |
           docker run -d --name web -p 8080:80 anvian-web

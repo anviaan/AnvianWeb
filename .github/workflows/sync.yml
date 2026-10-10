@@ -18,20 +18,20 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Fetch n8n counts from Notion
+      - name: Fetch public catalog from Notion
         id: sync
         continue-on-error: true
         run: npm run sync
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATA_SOURCE_ID: ${{ vars.NOTION_DATA_SOURCE_ID }}
-      - run: npm test && npm run check && npm run build && node scripts/smoke.mjs
+          NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+      - run: npm test && npm run check && npm run build && node scripts/smoke.ts
       - name: Commit the usable snapshot
         id: commit
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/registry.json src/data/projects.json
+          git add src/data/projects.json
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh project catalog'
             git push
@@ -44,7 +44,7 @@ jobs:
           DOKPLOY_URL: ${{ secrets.DOKPLOY_URL }}
           DOKPLOY_API_KEY: ${{ secrets.DOKPLOY_API_KEY }}
           DOKPLOY_APPLICATION_ID: ${{ secrets.DOKPLOY_APPLICATION_ID }}
-        run: node scripts/deploy.mjs
+        run: node scripts/deploy.ts
       - name: Report incomplete synchronization
         if: steps.sync.outcome == 'failure'
         run: |

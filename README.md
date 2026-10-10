@@ -4,7 +4,7 @@ Anvian’s Minecraft projects and original blog, in English. Static Astro + Type
 
 ## Local development
 
-Node **22.12+** (even-numbered supported release) and npm:
+Node **22.18+** (even-numbered supported release) and npm:
 
 ```sh
 npm ci
@@ -15,17 +15,49 @@ npm run build
 npm run preview
 ```
 
-## Catalog
+Scripts and tests use TypeScript executed directly by Node (native type stripping).
+`npm run check` checks the Astro site and strictly type-checks the scripts with
+`tsc --noEmit`; no runtime transpiler or emitted JavaScript is needed.
 
-- `data/registry.json`: explicit editorial IDs and platform mappings; optional `name`, `description`, `type`, `image`, `github`, `featured` overrides and a verified `curseforgeUrl` independent of whether its count is available. CurseForge-only entries require verified `curseforgeId` and a `type`; no name-based merging.
-- `src/data/projects.json`: public snapshot, no credentials. `sources` contains each platform’s URL, count, update timestamp and stale flag; `expectedSources` identifies partial totals.
-- `npm run sync`: discover public Modrinth projects, refresh mapped CurseForge projects and preserve last known counts on errors. A missing initial count is unavailable, not zero. Nonzero exit signals partial or failed synchronization, even when the usable snapshot is updated.
-- IDs for 16 CurseForge mappings were read from the author’s publication workflows; two more (Survive To Zombies 2 and SculkHorn3D) were verified on official project pages. Canonical platform links were followed from the author’s public CurseForge profile. This is **not yet a complete audit of CurseForge-only projects**. Add verified entries explicitly; the profile spans other games and pagination; only verified Minecraft entries are included.
-- WorldRemover is editorially classified as a datapack from its description and source repository; its Modrinth route remains the API-provided `/mod/` URL.
-- Images and icons come from the author’s Modrinth project galleries; blog images were copied from BlogAnvian. Fonts are bundled through Fontsource.
-- Downloads are platform-reported download events, not unique users. Totals include only available source counts. Stale values retain their original timestamp.
+## Catalog — Notion is the source of truth
 
-Do not put API keys in JSON, `PUBLIC_*`, Docker build arguments, or client code. For local synchronization set `CURSEFORGE_API_KEY` in your shell without committing it.
+`npm run sync` reads Game Projects through Notion and generates
+`src/data/projects.json`. This public snapshot is the only catalog input to the
+static build and the last-known download baseline; do not edit it manually.
+There is no local editorial registry or direct Modrinth/CurseForge importer.
+
+Only `Minecraft-Java` rows with `PublishOnWeb` checked are published. Unchecking
+it (or deleting/trashing a row) removes the project on the next successful sync.
+`Status = Archived` keeps it visible with an Archived badge.
+
+| Notion property | Public data |
+| --- | --- |
+| `Name` (title) | Project name |
+| `WebId` (text) | Unique stable ID: lowercase letters, digits, underscores, hyphens |
+| `WebDescription` (text) | Public description, never the private page body |
+| `WebType` (select) | `mod`, `modpack`, `resourcepack`, `datapack` |
+| `WebIcon`, `WebImage` (URL) | Optional permanent public HTTPS images |
+| `WebGitHub` (URL) | Optional GitHub repository |
+| `WebModrinth`, `WebCurseForge` (URL) | At least one official project link; defines expected count sources |
+| `WebFeatured` (checkbox) | Include among up to four active homepage highlights |
+| `PublishOnWeb` (checkbox) | Explicit publication consent; unchecked by default |
+
+To add a project, complete its public fields and check `PublishOnWeb`. Edits are
+applied by the next sync, including empty optional fields. Platform IDs and n8n
+count fields remain in Notion; no matching by project name is performed.
+
+Downloads are platform-reported events, not unique users. Invalid/missing counts
+retain the previous valid value and timestamp, marked stale/partial. Baselines
+are reused only for unchanged project IDs and platform links. The n8n combined
+`Downloads` total is never added to individual platform counts. No initial valid
+count is shown as unavailable, not zero. Incomplete counts produce a nonzero exit
+but still save usable catalog data. Invalid metadata, duplicate IDs/links,
+request/pagination failures or an empty published catalog leave the snapshot
+unchanged. An API failure therefore does not update the deployed freshness flags.
+
+Use permanent public image URLs, not Notion uploads or signed attachment URLs.
+Private page bodies, credentials and attachment URLs are never imported.
+Do not put secrets in JSON, `PUBLIC_*`, Docker build arguments or client code.
 
 ## GitHub Actions
 
@@ -35,14 +67,15 @@ Configure repository **Actions secrets**:
 
 | Secret | Purpose |
 | --- | --- |
-| `CURSEFORGE_API_KEY` | Official API read access (`x-api-key`), not the publishing token |
+| `NOTION_TOKEN` | Read-only Notion integration shared with Game Projects |
+| `NOTION_DATA_SOURCE_ID` | Game Projects data source ID |
 | `DOKPLOY_URL` | HTTPS base URL of your Dokploy instance |
 | `DOKPLOY_API_KEY` | Access to trigger deployment of this application |
 | `DOKPLOY_APPLICATION_ID` | Target application ID |
 
 Allow Actions to write repository contents. If branch rules forbid direct bot commits, permit this workflow’s bot before enabling scheduled sync. Runs serialize to avoid overlapping catalog updates.
 
-After validating the snapshot, the bot commits it and explicitly calls `/api/application.deploy`. This avoids relying on workflows/webhooks from `GITHUB_TOKEN` commits. A deployment request does **not** prove Dokploy completed the build: inspect Dokploy logs and verify the live catalog date. Partial platform failures still publish usable data and then mark the workflow failed. No secrets are printed.
+After validating the snapshot, the bot commits it and explicitly calls `/api/application.deploy`. This avoids relying on workflows/webhooks from `GITHUB_TOKEN` commits. A deployment request does **not** prove Dokploy completed the build: inspect Dokploy logs and verify the live catalog date. Partial count failures still publish usable data and then mark the workflow failed. No secrets are printed.
 
 ## Dokploy
 
@@ -80,14 +113,14 @@ Expect permanent redirects to the corresponding canonical `anvian.net` URLs and 
 
 Mermaid is used only for the migrated article’s flowcharts. KaTeX is overridden to its patched 0.19 release to avoid an advisory in Mermaid’s older transitive version.
 
-Local build and container checks are separate from production readiness. CurseForge live counts require your API key. Daily end-to-end automation requires GitHub secrets and a real Dokploy application. Do not claim production deployment or change the old blog/DNS until those checks pass.
+Local build and container checks are separate from production readiness. Counts come from the existing n8n flow through Notion. Daily end-to-end automation requires GitHub secrets and a real Dokploy application. Do not claim production deployment or change the old blog/DNS until those checks pass.
 
 ## Notion / n8n download synchronization
 
 `npm run sync` now reads Game Projects through the official Notion API. It does
 not call CurseForge or require `CURSEFORGE_API_KEY`. Keep that credential in n8n.
 Configure GitHub secret `NOTION_TOKEN` with a read-only integration shared only
-with Game Projects, and Actions variable `NOTION_DATA_SOURCE_ID`:
+with Game Projects, and GitHub secret `NOTION_DATA_SOURCE_ID`:
 `b9afc51f-cce1-4059-a95d-db22c635081b`.
 The chat Notion connection is not a credential for unattended Actions.
 
@@ -99,12 +132,10 @@ are labeled conservatively. A Notion request/schema/mapping failure retains the
 snapshot; unmatched projects retain previous counts marked stale. No private page
 body or Notion attachment URL is published.
 
-This migration currently matches existing editorial entries by explicit platform
-IDs. New projects still require `data/registry.json` and initial public metadata;
-Notion publication controls/new-project editorial import are not yet implemented.
-Historical platform importer remains available as a tested helper, not the scheduled
-entry point. Earlier setup instructions mentioning a website CurseForge secret are
-superseded by this section. Do not remove the n8n CurseForge credential.
+The 20 existing public projects were migrated into the `Web*` properties and
+explicitly opted in. Other projects and ideas remain unpublished by default.
+The old platform importer and `registry.json` have been removed. Keep n8n's
+CurseForge credential; the website does not need it.
 
 Validate the imported n8n workflow first, then run `npm run sync` using the dedicated
 Notion token. Verify a real GitHub run and Dokploy deploy before considering daily

@@ -1,258 +1,75 @@
 [
   {
-    "id": "record-days-survived",
-    "name": "Record Days Survived",
-    "description": "This Minecraft mod challenges you to keep track of how many days you survive without dying - can you reach a record number of days alive before falling to the dangers of the world?",
+    "id": "-bedrock-plus",
+    "name": "Bedrock Plus",
+    "description": "Adds a new variant of bedrock, which can be combined with netherite armor.",
     "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/CJC1Uvdj/deaf0781655b2aff1e92afd70418956ec82bb7b5_96.webp",
-    "image": null,
-    "github": "https://github.com/anviaan/Record-Days-Survived",
+    "icon": "https://cdn.modrinth.com/data/pdjxnvXe/9db2c5fc2c81ab70b15e16fa18e579138ad0639b.png",
+    "image": "https://cdn.modrinth.com/data/pdjxnvXe/images/3decd0c5d15cb431fc99935d42c0478042f48ca3.png",
+    "github": "https://github.com/anviaan/BedrockPlus",
     "featured": false,
     "sources": {
       "modrinth": {
-        "url": "https://modrinth.com/mod/record-days-survived",
-        "downloads": 18689,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
+        "url": "https://modrinth.com/mod/-bedrock-plus",
+        "downloads": 59732,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       },
       "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/record-days-survived",
-        "downloads": 153532,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
+        "url": "https://www.curseforge.com/minecraft/mc-mods/bedrock-pus",
+        "downloads": 168408,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/-bedrock-plus",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/bedrock-pus"
     },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/record-days-survived"
-    },
     "reportedDownloads": {
-      "value": 172221,
+      "value": 228140,
       "stale": false,
       "partial": false
     },
     "archived": false
   },
   {
-    "id": "createandspace",
-    "name": "Create And Space",
-    "description": "Experience survival with Create mod, with the possibility to go to space with Ad Astra at Fabric.",
-    "type": "modpack",
-    "icon": "https://cdn.modrinth.com/data/ItIhxk5J/3422f1753ea259ff461e8ef41dace41fe544f3f6_96.webp",
-    "image": null,
-    "github": "https://github.com/anviaan/CreateAndSpace",
-    "featured": true,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/modpack/createandspace",
-        "downloads": 72072,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/modpacks/createandspace",
-        "downloads": 3990,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/modpacks/createandspace"
-    },
-    "reportedDownloads": {
-      "value": 76062,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "sutvive-to-zombies-2",
-    "name": "Sutvive To Zombies 2",
-    "description": "Fight for your life in a very complicated zombie apocalypse",
-    "type": "modpack",
-    "icon": "https://cdn.modrinth.com/data/GXmSF7VW/56959d5156b9667615fb22cc81ea2dcf2d456495_96.webp",
-    "image": "https://cdn.modrinth.com/data/GXmSF7VW/images/832f84dfe8b99a06ae2d698e9358cff1ea988a78_350.webp",
-    "github": null,
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/modpack/sutvive-to-zombies-2",
-        "downloads": 884,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/modpacks/survive-to-zombies-2",
-        "downloads": 166,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/modpacks/survive-to-zombies-2"
-    },
-    "reportedDownloads": {
-      "value": 1050,
-      "stale": false,
-      "partial": false
-    },
-    "archived": true
-  },
-  {
-    "id": "glow-ink-plus",
-    "name": "Glow Ink Plus",
-    "description": "Add more functions to the glow ink, in this mod you can make the wool and carpets glow ",
+    "id": "-sculk-horn",
+    "name": "Sculk Horn",
+    "description": "Creates an area or distance sonic attack with 2 new horns.",
     "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/DfZhZ0LX/3672dc199f2a0143dca60e9a5b5a8c0e50e695a1_96.webp",
-    "image": "https://cdn.modrinth.com/data/DfZhZ0LX/images/f560ac576417ab1674de4308781a4dbb38811ee3_350.webp",
-    "github": "https://github.com/anviaan/GlowInkPlus",
+    "icon": "https://cdn.modrinth.com/data/BfFhIqA7/53592adb7302cf09e70d2553f000b8d29815eabc.png",
+    "image": "https://cdn.modrinth.com/data/BfFhIqA7/images/09f01d901e8329f0630e6a91cce04c1ff8787ce1_350.webp",
+    "github": "https://github.com/anviaan/SculkHorn",
     "featured": false,
     "sources": {
       "modrinth": {
-        "url": "https://modrinth.com/mod/glow-ink-plus",
-        "downloads": 67341,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "url": "https://modrinth.com/mod/-sculk-horn",
+        "downloads": 247630,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       },
       "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/glow-ink-plus",
-        "downloads": 120209,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "url": "https://www.curseforge.com/minecraft/mc-mods/sculk-horn",
+        "downloads": 361178,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/-sculk-horn",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/sculk-horn"
     },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/glow-ink-plus"
-    },
     "reportedDownloads": {
-      "value": 187550,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "usedtotemmessage",
-    "name": "UsedTotemMessage",
-    "description": "Automatically detects when a player uses a Totem of Undying and sends a notification to all connected players.",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/euYgUV5u/9d97ad88ab999128b87e5dbe2affb6efc27f7534_96.webp",
-    "image": "https://cdn.modrinth.com/data/euYgUV5u/images/5546004d681511a98cda6e76c71f0f08aee9066d_350.webp",
-    "github": "https://github.com/anviaan/UsedTotemMessage",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/usedtotemmessage",
-        "downloads": 131,
-        "updatedAt": "2026-10-08T17:41:47.682Z",
-        "stale": true
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/usedtotemmessage",
-        "downloads": 215,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/usedtotemmessage"
-    },
-    "reportedDownloads": {
-      "value": 215,
-      "stale": true,
-      "partial": true
-    },
-    "archived": false
-  },
-  {
-    "id": "inventorytweak",
-    "name": "InventoryTweak",
-    "description": "Fast and easy inventory sorter",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/jGVzcXaf/58b4b2d23eca5c02bbb433f07b183c7604771ae6.png",
-    "image": null,
-    "github": "https://github.com/anviaan/InventoryTweak",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/inventorytweak",
-        "downloads": 144281,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/inventorytweak",
-        "downloads": 50571,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/inventorytweak"
-    },
-    "reportedDownloads": {
-      "value": 194852,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "sodium-extra-information",
-    "name": "Sodium Extra Information",
-    "description": "A Sodium Extra addon that adds more in-game information.",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/696WgnvT/410287c4b17a1ee494689368e9d1ced47716a05b_96.webp",
-    "image": "https://cdn.modrinth.com/data/696WgnvT/images/0b4d5884a7621a8cb90ac1a17f36329bd6b1935d_350.webp",
-    "github": "https://github.com/anviaan/SodiumExtraInformation",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/sodium-extra-information",
-        "downloads": 711729,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra-information",
-        "downloads": 566400,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra-information"
-    },
-    "reportedDownloads": {
-      "value": 1278129,
+      "value": 608808,
       "stale": false,
       "partial": false
     },
@@ -270,201 +87,27 @@
     "sources": {
       "modrinth": {
         "url": "https://modrinth.com/mod/anvians-lib",
-        "downloads": 1034828,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "downloads": 1036446,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       },
       "curseforge": {
         "url": "https://www.curseforge.com/minecraft/mc-mods/anvians-lib",
-        "downloads": 1223539,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "downloads": 1227110,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
     },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
     "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/anvians-lib",
       "curseforge": "https://www.curseforge.com/minecraft/mc-mods/anvians-lib"
     },
-    "reportedDownloads": {
-      "value": 2258367,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "electric-mace",
-    "name": "Electric Mace",
-    "description": "Adds the possibility of enchanting the new Mace with Channeling so that when we hit a mob from above it will be struck by lightning if it thunders.",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/9ksojQLy/275f9f2d28d30c6cbfe35b9b73a13636d03583bf.png",
-    "image": null,
-    "github": "https://github.com/anviaan/ElectricMace",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/electric-mace",
-        "downloads": 38727,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/electric-mace",
-        "downloads": 40780,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/electric-mace"
-    },
     "reportedDownloads": {
-      "value": 79507,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "worldremover",
-    "name": "WorldRemover",
-    "description": "This Datapack will help you to remove terrain from your world, while you are moving, leaving the Ores.",
-    "type": "datapack",
-    "icon": "https://cdn.modrinth.com/data/wcA7KcYx/e0989aa1b95d041f2c416a2118d021141e960628_96.webp",
-    "image": "https://cdn.modrinth.com/data/wcA7KcYx/images/11aa291d591b366922075b7cfb01b164e341da5e_350.webp",
-    "github": "https://github.com/anviaan/WorldRemoverDataPack",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/worldremover",
-        "downloads": 435,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth"
-    ],
-    "reportedDownloads": {
-      "value": 711,
-      "stale": false,
-      "partial": false
-    },
-    "archived": true
-  },
-  {
-    "id": "-sculk-horn",
-    "name": " Sculk Horn",
-    "description": "Creates an area or distance sonic attack with 2 new horns.",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/BfFhIqA7/53592adb7302cf09e70d2553f000b8d29815eabc.png",
-    "image": "https://cdn.modrinth.com/data/BfFhIqA7/images/09f01d901e8329f0630e6a91cce04c1ff8787ce1_350.webp",
-    "github": "https://github.com/anviaan/SculkHorn",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/-sculk-horn",
-        "downloads": 247568,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/sculk-horn",
-        "downloads": 361162,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/sculk-horn"
-    },
-    "reportedDownloads": {
-      "value": 608730,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "-bedrock-plus",
-    "name": " Bedrock Plus",
-    "description": "Adds a new variant of bedrock, which can be combined with netherite armor.",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/pdjxnvXe/9db2c5fc2c81ab70b15e16fa18e579138ad0639b.png",
-    "image": "https://cdn.modrinth.com/data/pdjxnvXe/images/3decd0c5d15cb431fc99935d42c0478042f48ca3.png",
-    "github": "https://github.com/anviaan/BedrockPlus",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/-bedrock-plus",
-        "downloads": 59694,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/bedrock-pus",
-        "downloads": 168386,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/bedrock-pus"
-    },
-    "reportedDownloads": {
-      "value": 228080,
-      "stale": false,
-      "partial": false
-    },
-    "archived": false
-  },
-  {
-    "id": "simple-mango",
-    "name": "Simple Mango",
-    "description": "Add a new tree with a new type of wood and food ",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/WaggvUE7/b1d54f4ff9291488bef164ca53e27e97548397f9.png",
-    "image": "https://cdn.modrinth.com/data/WaggvUE7/images/507cac2457919bbd3c8564c014d114c540308662.png",
-    "github": "https://github.com/anviaan/SimpleMango",
-    "featured": true,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/simple-mango",
-        "downloads": 18180,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/simple-mango",
-        "downloads": 54315,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/simple-mango"
-    },
-    "reportedDownloads": {
-      "value": 72495,
+      "value": 2263556,
       "stale": false,
       "partial": false
     },
@@ -488,96 +131,23 @@
       },
       "curseforge": {
         "url": "https://www.curseforge.com/minecraft/mc-mods/chiseled-bookshelf-visualizer",
-        "downloads": 641570,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
+        "downloads": 641743,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
     },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
     "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/chiseled-bookshelf-visualizer",
       "curseforge": "https://www.curseforge.com/minecraft/mc-mods/chiseled-bookshelf-visualizer"
     },
-    "reportedDownloads": {
-      "value": 641570,
-      "stale": true,
-      "partial": true
-    },
-    "archived": false
-  },
-  {
-    "id": "go-fish-rehooked",
-    "name": "Go Fish Rehooked",
-    "description": "Go Fish is a fishing expansion for Minecraft that turns fishing into a dimension-spanning progression system",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/nGvPJWKu/d0803fa7107f0aa12abec4cf03b434ba733a41e5_96.webp",
-    "image": "https://cdn.modrinth.com/data/nGvPJWKu/images/25dd2c1d4806a675818d7677149e6d5452f33ec7_350.webp",
-    "github": "https://github.com/anviaan/GoFishRehooked",
-    "featured": true,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/go-fish-rehooked",
-        "downloads": 371,
-        "updatedAt": "2026-10-08T17:41:47.682Z",
-        "stale": true
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/go-fish-rehooked",
-        "downloads": 1149,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/go-fish-rehooked"
-    },
     "reportedDownloads": {
-      "value": 1149,
+      "value": 641743,
       "stale": true,
       "partial": true
-    },
-    "archived": false
-  },
-  {
-    "id": "morebeeinfo",
-    "name": "MoreBeeInfo",
-    "description": "Client-side Mod that adds the number of bees and the level of honey in the bee nest and the hive",
-    "type": "mod",
-    "icon": "https://cdn.modrinth.com/data/N2XKPu4u/a0e353c69831738121603e395e980590d96a858f_96.webp",
-    "image": "https://cdn.modrinth.com/data/N2XKPu4u/images/1179bea6c554a6e6aac28ec3c7156c4c190dae9f_350.webp",
-    "github": "https://github.com/anviaan/MoreBeeInfo",
-    "featured": false,
-    "sources": {
-      "modrinth": {
-        "url": "https://modrinth.com/mod/morebeeinfo",
-        "downloads": 193918,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      },
-      "curseforge": {
-        "url": "https://www.curseforge.com/minecraft/mc-mods/morebeeinfo",
-        "downloads": 186671,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
-        "stale": false
-      }
-    },
-    "expectedSources": [
-      "modrinth",
-      "curseforge"
-    ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/morebeeinfo"
-    },
-    "reportedDownloads": {
-      "value": 380589,
-      "stale": false,
-      "partial": false
     },
     "archived": false
   },
@@ -593,26 +163,103 @@
     "sources": {
       "modrinth": {
         "url": "https://modrinth.com/mod/create_unbreakable",
-        "downloads": 154402,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
+        "downloads": 154466,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       },
       "curseforge": {
         "url": "https://www.curseforge.com/minecraft/mc-mods/create-unbreakable-tools",
-        "downloads": 377845,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
+        "downloads": 377915,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/create_unbreakable",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/create-unbreakable-tools"
     },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/create-unbreakable-tools"
-    },
     "reportedDownloads": {
-      "value": 532247,
+      "value": 532381,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "createandspace",
+    "name": "Create And Space ModPack",
+    "description": "Experience survival with Create mod, with the possibility to go to space with Ad Astra at Fabric.",
+    "type": "modpack",
+    "icon": "https://cdn.modrinth.com/data/ItIhxk5J/3422f1753ea259ff461e8ef41dace41fe544f3f6_96.webp",
+    "image": null,
+    "github": "https://github.com/anviaan/CreateAndSpace",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/modpack/createandspace",
+        "downloads": 72100,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/modpacks/createandspace",
+        "downloads": 3990,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/modpack/createandspace",
+      "curseforge": "https://www.curseforge.com/minecraft/modpacks/createandspace"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 76090,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "electric-mace",
+    "name": "Electric Mace",
+    "description": "Adds the possibility of enchanting the new Mace with Channeling so that when we hit a mob from above it will be struck by lightning if it thunders.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/9ksojQLy/275f9f2d28d30c6cbfe35b9b73a13636d03583bf.png",
+    "image": null,
+    "github": "https://github.com/anviaan/ElectricMace",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/electric-mace",
+        "downloads": 38795,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/electric-mace",
+        "downloads": 40807,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/electric-mace",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/electric-mace"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 79602,
       "stale": false,
       "partial": false
     },
@@ -630,26 +277,179 @@
     "sources": {
       "modrinth": {
         "url": "https://modrinth.com/mod/exploitation-timer",
-        "downloads": 11788,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "downloads": 11804,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       },
       "curseforge": {
         "url": "https://www.curseforge.com/minecraft/mc-mods/exploitation-timer",
-        "downloads": 14704,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "downloads": 14714,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/exploitation-timer",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/exploitation-timer"
     },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/exploitation-timer"
-    },
     "reportedDownloads": {
-      "value": 26492,
+      "value": 26518,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "glow-ink-plus",
+    "name": "GlowInkPlus",
+    "description": "Add more functions to the glow ink, in this mod you can make the wool and carpets glow",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/DfZhZ0LX/3672dc199f2a0143dca60e9a5b5a8c0e50e695a1_96.webp",
+    "image": "https://cdn.modrinth.com/data/DfZhZ0LX/images/f560ac576417ab1674de4308781a4dbb38811ee3_350.webp",
+    "github": "https://github.com/anviaan/GlowInkPlus",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/glow-ink-plus",
+        "downloads": 67389,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/glow-ink-plus",
+        "downloads": 120223,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/glow-ink-plus",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/glow-ink-plus"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 187612,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "go-fish-rehooked",
+    "name": "Go Fish: Rehooked",
+    "description": "Go Fish is a fishing expansion for Minecraft that turns fishing into a dimension-spanning progression system",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/nGvPJWKu/d0803fa7107f0aa12abec4cf03b434ba733a41e5_96.webp",
+    "image": "https://cdn.modrinth.com/data/nGvPJWKu/images/25dd2c1d4806a675818d7677149e6d5452f33ec7_350.webp",
+    "github": "https://github.com/anviaan/GoFishRehooked",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/go-fish-rehooked",
+        "downloads": 371,
+        "updatedAt": "2026-10-08T17:41:47.682Z",
+        "stale": true
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/go-fish-rehooked",
+        "downloads": 1159,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/go-fish-rehooked",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/go-fish-rehooked"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 1159,
+      "stale": true,
+      "partial": true
+    },
+    "archived": false
+  },
+  {
+    "id": "inventorytweak",
+    "name": "InventoryTweak",
+    "description": "Fast and easy inventory sorter",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/jGVzcXaf/58b4b2d23eca5c02bbb433f07b183c7604771ae6.png",
+    "image": null,
+    "github": "https://github.com/anviaan/InventoryTweak",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/inventorytweak",
+        "downloads": 144439,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/inventorytweak",
+        "downloads": 50609,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/inventorytweak",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/inventorytweak"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 195048,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "morebeeinfo",
+    "name": "MoreBeeInfo",
+    "description": "Client-side Mod that adds the number of bees and the level of honey in the bee nest and the hive",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/N2XKPu4u/a0e353c69831738121603e395e980590d96a858f_96.webp",
+    "image": "https://cdn.modrinth.com/data/N2XKPu4u/images/1179bea6c554a6e6aac28ec3c7156c4c190dae9f_350.webp",
+    "github": "https://github.com/anviaan/MoreBeeInfo",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/morebeeinfo",
+        "downloads": 194138,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/morebeeinfo",
+        "downloads": 186688,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/morebeeinfo",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/morebeeinfo"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 380826,
       "stale": false,
       "partial": false
     },
@@ -657,7 +457,7 @@
   },
   {
     "id": "perfume-mod",
-    "name": "Perfume Mod",
+    "name": "Perfume",
     "description": "Add perfumes which will give you a pleasant scent for the mobs and make them follow you.",
     "type": "mod",
     "icon": "https://cdn.modrinth.com/data/J5eO7G9B/2c7d4383bee6e3ab59280cf5b4f85b04a9b7edf3_96.webp",
@@ -668,9 +468,12 @@
       "modrinth": {
         "url": "https://modrinth.com/mod/perfume-mod",
         "downloads": 253,
-        "updatedAt": "2026-10-10T00:14:00.000Z",
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/perfume-mod"
     },
     "expectedSources": [
       "modrinth"
@@ -683,8 +486,46 @@
     "archived": true
   },
   {
+    "id": "record-days-survived",
+    "name": "Record Days Survived",
+    "description": "This Minecraft mod challenges you to keep track of how many days you survive without dying - can you reach a record number of days alive before falling to the dangers of the world?",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/CJC1Uvdj/deaf0781655b2aff1e92afd70418956ec82bb7b5_96.webp",
+    "image": null,
+    "github": "https://github.com/anviaan/Record-Days-Survived",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/record-days-survived",
+        "downloads": 18717,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/record-days-survived",
+        "downloads": 153536,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/record-days-survived",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/record-days-survived"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 172253,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
     "id": "sculkhorn3d",
-    "name": "SculkHorn3D",
+    "name": "SculkHorn 3D",
     "description": "A texture pack for the Sculk Horn mod to make the Sculk horns 3D",
     "type": "resourcepack",
     "icon": "https://cdn.modrinth.com/data/pPdRHBeF/7dda406a81a0dd8120cd1639f118d2acbc7f459a.png",
@@ -694,26 +535,209 @@
     "sources": {
       "modrinth": {
         "url": "https://modrinth.com/resourcepack/sculkhorn3d",
-        "downloads": 1308,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "downloads": 1310,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       },
       "curseforge": {
         "url": "https://www.curseforge.com/minecraft/texture-packs/sculkhorn3d",
         "downloads": 2091,
-        "updatedAt": "2026-10-10T00:13:00.000Z",
+        "updatedAt": "2026-10-10T09:00:00.000Z",
         "stale": false
       }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/resourcepack/sculkhorn3d",
+      "curseforge": "https://www.curseforge.com/minecraft/texture-packs/sculkhorn3d"
     },
     "expectedSources": [
       "modrinth",
       "curseforge"
     ],
-    "platformLinks": {
-      "curseforge": "https://www.curseforge.com/minecraft/texture-packs/sculkhorn3d"
-    },
     "reportedDownloads": {
-      "value": 3399,
+      "value": 3401,
+      "stale": false,
+      "partial": false
+    },
+    "archived": true
+  },
+  {
+    "id": "simple-mango",
+    "name": "Simple Mango",
+    "description": "Add a new tree with a new type of wood and food",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/WaggvUE7/b1d54f4ff9291488bef164ca53e27e97548397f9.png",
+    "image": "https://cdn.modrinth.com/data/WaggvUE7/images/507cac2457919bbd3c8564c014d114c540308662.png",
+    "github": "https://github.com/anviaan/SimpleMango",
+    "featured": true,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/simple-mango",
+        "downloads": 18188,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/simple-mango",
+        "downloads": 54320,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/simple-mango",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/simple-mango"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 72508,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "sodium-extra-information",
+    "name": "Sodium Extra Information",
+    "description": "A Sodium Extra addon that adds more in-game information.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/696WgnvT/410287c4b17a1ee494689368e9d1ced47716a05b_96.webp",
+    "image": "https://cdn.modrinth.com/data/696WgnvT/images/0b4d5884a7621a8cb90ac1a17f36329bd6b1935d_350.webp",
+    "github": "https://github.com/anviaan/SodiumExtraInformation",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/sodium-extra-information",
+        "downloads": 712689,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra-information",
+        "downloads": 569494,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/sodium-extra-information",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/sodium-extra-information"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 1282183,
+      "stale": false,
+      "partial": false
+    },
+    "archived": false
+  },
+  {
+    "id": "sutvive-to-zombies-2",
+    "name": "Survive To Zombies 2",
+    "description": "Fight for your life in a very complicated zombie apocalypse",
+    "type": "modpack",
+    "icon": "https://cdn.modrinth.com/data/GXmSF7VW/56959d5156b9667615fb22cc81ea2dcf2d456495_96.webp",
+    "image": "https://cdn.modrinth.com/data/GXmSF7VW/images/832f84dfe8b99a06ae2d698e9358cff1ea988a78_350.webp",
+    "github": null,
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/modpack/sutvive-to-zombies-2",
+        "downloads": 884,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/modpacks/survive-to-zombies-2",
+        "downloads": 166,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/modpack/sutvive-to-zombies-2",
+      "curseforge": "https://www.curseforge.com/minecraft/modpacks/survive-to-zombies-2"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 1050,
+      "stale": false,
+      "partial": false
+    },
+    "archived": true
+  },
+  {
+    "id": "usedtotemmessage",
+    "name": "UsedTotemMessage",
+    "description": "Automatically detects when a player uses a Totem of Undying and sends a notification to all connected players.",
+    "type": "mod",
+    "icon": "https://cdn.modrinth.com/data/euYgUV5u/9d97ad88ab999128b87e5dbe2affb6efc27f7534_96.webp",
+    "image": "https://cdn.modrinth.com/data/euYgUV5u/images/5546004d681511a98cda6e76c71f0f08aee9066d_350.webp",
+    "github": "https://github.com/anviaan/UsedTotemMessage",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/usedtotemmessage",
+        "downloads": 131,
+        "updatedAt": "2026-10-08T17:41:47.682Z",
+        "stale": true
+      },
+      "curseforge": {
+        "url": "https://www.curseforge.com/minecraft/mc-mods/usedtotemmessage",
+        "downloads": 217,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/usedtotemmessage",
+      "curseforge": "https://www.curseforge.com/minecraft/mc-mods/usedtotemmessage"
+    },
+    "expectedSources": [
+      "modrinth",
+      "curseforge"
+    ],
+    "reportedDownloads": {
+      "value": 217,
+      "stale": true,
+      "partial": true
+    },
+    "archived": false
+  },
+  {
+    "id": "worldremover",
+    "name": "WorldRemover",
+    "description": "This Datapack will help you to remove terrain from your world, while you are moving, leaving the Ores.",
+    "type": "datapack",
+    "icon": "https://cdn.modrinth.com/data/wcA7KcYx/e0989aa1b95d041f2c416a2118d021141e960628_96.webp",
+    "image": "https://cdn.modrinth.com/data/wcA7KcYx/images/11aa291d591b366922075b7cfb01b164e341da5e_350.webp",
+    "github": "https://github.com/anviaan/WorldRemoverDataPack",
+    "featured": false,
+    "sources": {
+      "modrinth": {
+        "url": "https://modrinth.com/mod/worldremover",
+        "downloads": 435,
+        "updatedAt": "2026-10-10T09:00:00.000Z",
+        "stale": false
+      }
+    },
+    "platformLinks": {
+      "modrinth": "https://modrinth.com/mod/worldremover"
+    },
+    "expectedSources": [
+      "modrinth"
+    ],
+    "reportedDownloads": {
+      "value": 711,
       "stale": false,
       "partial": false
     },
