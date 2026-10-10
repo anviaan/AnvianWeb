@@ -58,7 +58,7 @@ export function projectFromNotion(row:NotionRow,previous:Project[],now=new Date(
  if(old?.reportedDownloads&&JSON.stringify([...old.expectedSources].sort())===JSON.stringify([...project.expectedSources].sort())&&project.expectedSources.every(source=>(old.platformLinks?.[source]??old.sources[source]?.url)===platformLinks[source]))project.reportedDownloads=old.reportedDownloads;
  return applyNotionCounts(project,row,now);
 }
-export async function syncNotion(fetcher=fetch,directory=root,env=process.env){
+export async function syncNotion(fetcher:(input:string,init?:RequestInit)=>Promise<Response>=fetch,directory=root,env=process.env){
  const previous:Project[]=JSON.parse(await readFile(new URL('src/data/projects.json',directory),'utf8'));
  if(!env.NOTION_TOKEN||!env.NOTION_DATA_SOURCE_ID)throw new Error('Configure NOTION_TOKEN and NOTION_DATA_SOURCE_ID');
  const rows:NotionRow[]=[];let cursor:string|null|undefined;const seen=new Set<string>();

@@ -4,24 +4,26 @@ Anvian’s Minecraft projects and original blog, in English. Static Astro + Type
 
 ## Local development
 
-Node **22.18+** (even-numbered supported release) and npm:
+Bun **1.3.14** (pinned in CI and Docker):
 
 ```sh
-npm ci
-npm run dev
-npm test
-npm run check
-npm run build
-npm run preview
+bun install --frozen-lockfile
+bun run dev
+bun test
+bun run check
+bun run build
+bun run preview
 ```
 
-Scripts and tests use TypeScript executed directly by Node (native type stripping).
-`npm run check` checks the Astro site and strictly type-checks the scripts with
-`tsc --noEmit`; no runtime transpiler or emitted JavaScript is needed.
+Scripts and tests use TypeScript executed directly by Bun. Bun automatically
+loads local `.env` files; never commit credentials.
+`bun run check` checks the Astro site and strictly type-checks the scripts with
+`tsc --noEmit`; no separate runtime transpiler or emitted JavaScript is needed.
+`bun.lock` is the only dependency lockfile. Node.js and npm are not required.
 
 ## Catalog — Notion is the source of truth
 
-`npm run sync` reads Game Projects through Notion and generates
+`bun run sync` reads Game Projects through Notion and generates
 `src/data/projects.json`. This public snapshot is the only catalog input to the
 static build and the last-known download baseline; do not edit it manually.
 There is no local editorial registry or direct Modrinth/CurseForge importer.
@@ -117,7 +119,7 @@ Local build and container checks are separate from production readiness. Counts 
 
 ## Notion / n8n download synchronization
 
-`npm run sync` now reads Game Projects through the official Notion API. It does
+`bun run sync` now reads Game Projects through the official Notion API. It does
 not call CurseForge or require `CURSEFORGE_API_KEY`. Keep that credential in n8n.
 Configure GitHub secret `NOTION_TOKEN` with a read-only integration shared only
 with Game Projects, and GitHub secret `NOTION_DATA_SOURCE_ID`:
@@ -137,6 +139,6 @@ explicitly opted in. Other projects and ideas remain unpublished by default.
 The old platform importer and `registry.json` have been removed. Keep n8n's
 CurseForge credential; the website does not need it.
 
-Validate the imported n8n workflow first, then run `npm run sync` using the dedicated
+Validate the imported n8n workflow first, then run `bun run sync` using the dedicated
 Notion token. Verify a real GitHub run and Dokploy deploy before considering daily
 updates operational. This change does not configure remote secrets or deploy.
