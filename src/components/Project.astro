@@ -1,15 +1,95 @@
 ---
-import {labels,total,partial,count,type Project} from '../data/catalog';
-interface Props {project:Project}
-const {project:p}=Astro.props;
-const sources=Object.entries(p.sources);
-const available=!!p.reportedDownloads||sources.length>0;
-const links={...p.platformLinks,...Object.fromEntries(sources.map(([name,s])=>[name,s.url]))};
+import PlatformIcon from './PlatformIcon.astro';
+import { labels, total, partial, count, type Project } from '../data/catalog';
+interface Props {
+  project: Project;
+}
+const { project: p } = Astro.props;
+const sources = Object.entries(p.sources);
+const available = !!p.reportedDownloads || sources.length > 0;
+const links = {
+  ...p.platformLinks,
+  ...Object.fromEntries(sources.map(([name, s]) => [name, s.url])),
+};
 ---
-<article class="project" data-name={p.name.toLowerCase()} data-type={p.type} data-archived={p.archived?'true':'false'} data-downloads={total(p)}>
-<div class="project-heading">{p.icon&&<img src={p.icon} alt="" width="56" height="56" loading="lazy"/>}<div><span class="type">{labels[p.type]??p.type}</span><h3>{p.name}</h3>{p.archived&&<span class="archived-badge">Archived</span>}</div></div>
-<p class="project-description">{p.description}</p>
-{p.id==='anvians-lib'&&<p class="telemetry-note">Includes telemetry for mod and Minecraft versions and loader usage. <a href="https://telemetry.anvian.net/">Privacy notice and how to disable telemetry ↗</a></p>}
-<div class="download"><strong>{available?count(total(p)):'Unavailable'}</strong> {available?'downloads':'download count'} {partial(p)&&<span class="status">· partial total</span>}{(p.reportedDownloads?.stale??Object.values(p.sources).some(s=>s.stale))&&<span class="status"> · last known counts</span>}</div>
-<div class="project-links">{Object.entries(links).map(([name,url])=><a href={url} aria-label={`${p.name} on ${name}`}><img class="platform-icon" src={`/icons/${name}.svg`} alt="" width="16" height="16"/>{name==='modrinth'?'Modrinth':'CurseForge'} <span aria-hidden="true">↗</span></a>)}{p.github&&<a href={p.github} aria-label={`${p.name} source on GitHub`}><img class="platform-icon" src="/icons/github.svg" alt="" width="16" height="16"/>GitHub <span aria-hidden="true">↗</span></a>}</div>
+
+<article
+  class="flex min-w-0 flex-col rounded-[14px] bg-surface p-[26px] [&_h3]:[overflow-wrap:anywhere]"
+  data-project
+  data-name={p.name.toLowerCase()}
+  data-type={p.type}
+  data-archived={p.archived ? 'true' : 'false'}
+  data-downloads={total(p)}
+>
+  <div
+    class="flex items-center gap-4 [&>img]:size-14 [&>img]:rounded-[10px] [&>img]:object-contain"
+  >
+    {
+      p.icon && (
+        <img src={p.icon} alt="" width="56" height="56" loading="lazy" />
+      )
+    }
+    <div>
+      <span class="mb-1.5 block text-xs text-green">
+        {labels[p.type] ?? p.type}
+      </span>
+      <h3>{p.name}</h3>
+      {
+        p.archived && (
+          <span class="mt-2 inline-block rounded-[3px] border border-muted px-[7px] py-[3px] text-[.72rem] leading-[1.4] text-muted">
+            Archived
+          </span>
+        )
+      }
+    </div>
+  </div>
+  <p class="my-5 min-h-[4.5em] text-[.93rem] max-[700px]:min-h-0">
+    {p.description}
+  </p>
+  {
+    p.id === 'anvians-lib' && (
+      <p class="mt-0 mb-5 text-[.82rem] [&_a]:text-green [&_a]:underline [&_a]:underline-offset-3">
+        Includes telemetry for mod and Minecraft versions and loader usage.{' '}
+        <a href="https://telemetry.anvian.net/">
+          Privacy notice and how to disable telemetry ↗
+        </a>
+      </p>
+    )
+  }
+  <div
+    class="mt-auto text-[.85rem] text-muted [&_strong]:font-numbers [&_strong]:text-[1.15rem] [&_strong]:text-text"
+  >
+    <strong>{available ? count(total(p)) : 'Unavailable'}</strong>{' '}
+    {available ? 'downloads' : 'download count'}{' '}
+    {partial(p) && <span class="text-xs">· partial total</span>}
+    {
+      (p.reportedDownloads?.stale ??
+        Object.values(p.sources).some((s) => s.stale)) && (
+        <span class="text-xs"> · last known counts</span>
+      )
+    }
+  </div>
+  <div
+    class="mt-5 flex flex-wrap gap-4 border-t border-line pt-[18px] text-[.82rem] font-semibold [&_a]:inline-flex [&_a]:items-center [&_a]:gap-1.5 [&_a]:py-1"
+  >
+    {
+      Object.entries(links).map(([name, url]) => (
+        <a href={url} aria-label={`${p.name} on ${name}`}>
+          <PlatformIcon
+            name={name === 'modrinth' ? 'modrinth' : 'curseforge'}
+          />
+          {name === 'modrinth' ? 'Modrinth' : 'CurseForge'}{' '}
+          <span aria-hidden="true">↗</span>
+        </a>
+      ))
+    }
+    {
+      p.github && (
+        <a href={p.github} aria-label={`${p.name} source on GitHub`}>
+          <PlatformIcon name="github" />
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      )
+    }
+  </div>
 </article>

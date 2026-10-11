@@ -1,4 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Page not found — Anvian"><section class="section page-top"><h1>A chunk is missing.</h1><p>This page couldn’t be found.</p><a class="button" href="/">Back home</a></section></Layout>
+
+<Layout title="Page not found — Anvian">
+  <section
+    class="mx-auto min-h-[60vh] max-w-[1440px] px-[5%] py-[65px] pt-[70px] max-[700px]:px-[6%] max-[700px]:py-[45px] max-[700px]:pt-[45px] [&>p]:max-w-[65ch]"
+  >
+    <h1>A chunk is missing.</h1>
+    <p>This page couldn’t be found.</p>
+    <a
+      class="inline-flex items-center justify-between gap-7 rounded-sm bg-green px-6 py-[18px] font-display font-normal text-[#17210e] hover:bg-[#c5f69b] hover:text-[#17210e]"
+      href="/"
+    >
+      Back home
+    </a>
+  </section>
+</Layout>

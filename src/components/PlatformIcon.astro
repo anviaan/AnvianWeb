@@ -1,0 +1,29 @@
+---
+import {
+  siGithub,
+  siModrinth,
+  siCurseforge,
+  siX,
+  siApachemaven,
+} from 'simple-icons';
+const icons = {
+  github: siGithub,
+  modrinth: siModrinth,
+  curseforge: siCurseforge,
+  x: siX,
+  maven: siApachemaven,
+};
+interface Props {
+  name: keyof typeof icons;
+}
+const { name } = Astro.props;
+---
+
+<svg
+  class="size-4 shrink-0 fill-current"
+  viewBox="0 0 24 24"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d={icons[name].path}></path>
+</svg>

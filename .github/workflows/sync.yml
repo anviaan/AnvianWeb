@@ -24,6 +24,7 @@ jobs:
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATA_SOURCE_ID: ${{ secrets.NOTION_DATA_SOURCE_ID }}
+      - run: bun run format:check
       - run: bun test && bun run check && bun run build && bun scripts/smoke.ts
       - name: Commit the usable snapshot
         id: commit

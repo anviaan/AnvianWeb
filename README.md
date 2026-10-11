@@ -21,6 +21,24 @@ loads local `.env` files; never commit credentials.
 `tsc --noEmit`; no separate runtime transpiler or emitted JavaScript is needed.
 `bun.lock` is the only dependency lockfile. Node.js and npm are not required.
 
+## Styling, icons and formatting
+
+Tailwind CSS v4 runs through the Vite plugin. Layout and component styles use
+utilities; `src/styles/global.css` contains theme tokens, base styles, the local
+font and Tailwind rules for generated Markdown/Mermaid content.
+
+Platform logos come from `simple-icons` and are rendered as static inline SVGs
+through `PlatformIcon.astro`, without client-side icon JavaScript or remote icon
+requests. Generic navigation/RSS symbols remain inline SVGs.
+
+```sh
+bun run format        # Format source, config and docs; sort Tailwind classes
+bun run format:check  # Check formatting without writing files (also runs in CI)
+```
+
+Prettier uses the Astro and Tailwind plugins. Generated catalog JSON, lockfile,
+build output, assets and original blog articles are excluded from formatting.
+
 ## Catalog — Notion is the source of truth
 
 `bun run sync` reads Game Projects through Notion and generates
@@ -32,17 +50,17 @@ Only `Minecraft-Java` rows with `PublishOnWeb` checked are published. Unchecking
 it (or deleting/trashing a row) removes the project on the next successful sync.
 `Status = Archived` keeps it visible with an Archived badge.
 
-| Notion property | Public data |
-| --- | --- |
-| `Name` (title) | Project name |
-| `WebId` (text) | Unique stable ID: lowercase letters, digits, underscores, hyphens |
-| `WebDescription` (text) | Public description, never the private page body |
-| `WebType` (select) | `mod`, `modpack`, `resourcepack`, `datapack` |
-| `WebIcon`, `WebImage` (URL) | Optional permanent public HTTPS images |
-| `WebGitHub` (URL) | Optional GitHub repository |
+| Notion property                      | Public data                                                        |
+| ------------------------------------ | ------------------------------------------------------------------ |
+| `Name` (title)                       | Project name                                                       |
+| `WebId` (text)                       | Unique stable ID: lowercase letters, digits, underscores, hyphens  |
+| `WebDescription` (text)              | Public description, never the private page body                    |
+| `WebType` (select)                   | `mod`, `modpack`, `resourcepack`, `datapack`                       |
+| `WebIcon`, `WebImage` (URL)          | Optional permanent public HTTPS images                             |
+| `WebGitHub` (URL)                    | Optional GitHub repository                                         |
 | `WebModrinth`, `WebCurseForge` (URL) | At least one official project link; defines expected count sources |
-| `WebFeatured` (checkbox) | Include among up to four active homepage highlights |
-| `PublishOnWeb` (checkbox) | Explicit publication consent; unchecked by default |
+| `WebFeatured` (checkbox)             | Include among up to four active homepage highlights                |
+| `PublishOnWeb` (checkbox)            | Explicit publication consent; unchecked by default                 |
 
 To add a project, complete its public fields and check `PublishOnWeb`. Edits are
 applied by the next sync, including empty optional fields. Platform IDs and n8n
@@ -67,13 +85,13 @@ Validation runs on pushes to `main` and pull requests. Daily sync runs at **11:0
 
 Configure repository **Actions secrets**:
 
-| Secret | Purpose |
-| --- | --- |
-| `NOTION_TOKEN` | Read-only Notion integration shared with Game Projects |
-| `NOTION_DATA_SOURCE_ID` | Game Projects data source ID |
-| `DOKPLOY_URL` | HTTPS base URL of your Dokploy instance |
-| `DOKPLOY_API_KEY` | Access to trigger deployment of this application |
-| `DOKPLOY_APPLICATION_ID` | Target application ID |
+| Secret                   | Purpose                                                |
+| ------------------------ | ------------------------------------------------------ |
+| `NOTION_TOKEN`           | Read-only Notion integration shared with Game Projects |
+| `NOTION_DATA_SOURCE_ID`  | Game Projects data source ID                           |
+| `DOKPLOY_URL`            | HTTPS base URL of your Dokploy instance                |
+| `DOKPLOY_API_KEY`        | Access to trigger deployment of this application       |
+| `DOKPLOY_APPLICATION_ID` | Target application ID                                  |
 
 Allow Actions to write repository contents. If branch rules forbid direct bot commits, permit this workflow’s bot before enabling scheduled sync. Runs serialize to avoid overlapping catalog updates.
 

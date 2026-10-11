@@ -1,6 +1,48 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import {getCollection} from 'astro:content';
-const posts=(await getCollection('blog',p=>!p.data.draft)).sort((a,b)=>b.data.date.getTime()-a.data.date.getTime());
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog', (p) => !p.data.draft)).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 ---
-<Layout title="Blog — Anvian"><section class="section page-top"><h1>From the<br/><em>workbench.</em></h1><p>Development, mods, games, and whatever catches my attention.</p><div class="blog-list">{posts.map(p=><a class="post-row" href={`/blog/${p.id}/`}>{p.data.image&&<img src={'/'+p.data.image.replace(/^\//,'')} alt="" width="240" height="140" loading="lazy"/>}<div><time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0,10)}</time><h2>{p.data.title}</h2><p>{p.data.description}</p></div><span aria-hidden="true">↗</span></a>)}</div></section></Layout>
+
+<Layout title="Blog — Anvian">
+  <section
+    class="mx-auto min-h-[60vh] max-w-[1440px] px-[5%] py-[65px] pt-[70px] max-[700px]:px-[6%] max-[700px]:py-[45px] max-[700px]:pt-[45px] [&>p]:max-w-[65ch]"
+  >
+    <h1>
+      From the
+      <br />
+      <em>workbench.</em>
+    </h1>
+    <p>Development, mods, games, and whatever catches my attention.</p>
+    <div class="mt-[45px]">
+      {
+        posts.map((p) => (
+          <a
+            class="flex items-center gap-[30px] border-b border-line py-[30px] max-[700px]:flex-wrap max-[700px]:gap-[18px] [&_h2]:text-[1.6rem] [&_p]:mt-2 [&_p]:mb-0 [&_p]:text-[.92rem] [&>div]:min-w-0 [&>div]:flex-1 max-[700px]:[&>div]:basis-4/5 [&>img]:h-[140px] [&>img]:w-[230px] [&>img]:rounded-xl [&>img]:object-cover max-[700px]:[&>img]:h-auto max-[700px]:[&>img]:w-full [&>span]:text-[1.4rem] [&>span]:text-green [&>time]:shrink-0 [&>time]:basis-[125px] [&>time]:text-[.85rem] [&>time]:text-muted max-[700px]:[&>time]:basis-full"
+            href={`/blog/${p.id}/`}
+          >
+            {p.data.image && (
+              <img
+                src={'/' + p.data.image.replace(/^\//, '')}
+                alt=""
+                width="240"
+                height="140"
+                loading="lazy"
+              />
+            )}
+            <div>
+              <time datetime={p.data.date.toISOString()}>
+                {p.data.date.toISOString().slice(0, 10)}
+              </time>
+              <h2>{p.data.title}</h2>
+              <p>{p.data.description}</p>
+            </div>
+            <span aria-hidden="true">↗</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

@@ -1,13 +1,156 @@
 ---
+import PlatformIcon from '../components/PlatformIcon.astro';
 import '@fontsource-variable/space-grotesk';
 import '../styles/global.css';
-interface Props {title?:string;description?:string;image?:string}
-const {title='Anvian — Minecraft, made a little different.',description='Explore Minecraft mods, modpacks and experiments by Anvian.',image='/images/mcmodtest/mcmodtest.png'}=Astro.props;
-const canonical=new URL(Astro.url.pathname,Astro.site);
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+const {
+  title = 'Anvian — Minecraft, made a little different.',
+  description = 'Explore Minecraft mods, modpacks and experiments by Anvian.',
+  image = '/images/mcmodtest/mcmodtest.png',
+} = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title}</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><link rel="icon" href="/favicon.ico"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta property="og:image" content={new URL(image||'/favicon.png',Astro.site)}/><meta name="twitter:card" content="summary_large_image"/><link rel="alternate" type="application/rss+xml" title="Anvian’s Blog" href="/rss.xml"/></head><body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="header"><a class="brand" href="/" aria-label="anvian home"><img class="brand-avatar" src="/images/anvian_head.png" alt="" width="36" height="36"/>anvian<span class="brand-dot">.</span></a><nav aria-label="Main navigation">{[['/','Home'],['/projects/','Projects'],['/blog/','Blog']].map(([url,label])=><a href={url} aria-current={Astro.url.pathname===url?'page':undefined}><svg class="nav-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor" shape-rendering="crispEdges">{label==='Home'?<path d="M7 1h2v2h2v2h2v2h2v2h-2v6H9v-4H7v4H3V9H1V7h2V5h2V3h2Z"/>:label==='Projects'?<path d="M1 2h6v2h8v10H1Zm2 4v6h10V6Z" fill-rule="evenodd"/>:<path d="M2 1h12v14H2Zm2 2v10h8V3Zm1 2h6v2H5Zm0 4h6v2H5Z" fill-rule="evenodd"/>}</svg>{label}</a>)}</nav></header>
-<main id="main"><slot/></main>
-<footer><a class="brand" href="/">anvian.</a><p>Made for a world worth exploring.</p><div><a href="https://github.com/anviaan"><img class="platform-icon" src="/icons/github.svg" alt="" width="16" height="16"/>GitHub</a><a href="https://modrinth.com/user/anvian"><img class="platform-icon" src="/icons/modrinth.svg" alt="" width="16" height="16"/>Modrinth</a><a href="https://www.curseforge.com/members/anvian/projects"><img class="platform-icon" src="/icons/curseforge.svg" alt="" width="16" height="16"/>CurseForge</a><a href="https://x.com/carbajal_andre"><img class="platform-icon" src="/icons/x.svg" alt="" width="16" height="16"/>X</a><a href="https://maven.anvian.net/"><img class="platform-icon" src="/icons/maven.svg" alt="" width="16" height="16"/>Maven</a><a href="/rss.xml"><img class="platform-icon" src="/icons/rss.svg" alt="" width="16" height="16"/>RSS</a></div><small>Not affiliated with Mojang Studios or Microsoft.</small></footer>
-</body></html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content={new URL(image || '/favicon.png', Astro.site)}
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Anvian’s Blog"
+      href="/rss.xml"
+    />
+  </head>
+  <body>
+    <a
+      class="absolute top-[-5rem] left-4 z-10 bg-bg p-4 focus:top-4"
+      href="#main"
+    >
+      Skip to content
+    </a>
+    <header
+      class="mx-auto flex max-w-[1440px] items-center justify-between gap-5 border-b border-line px-[5%] py-7 max-[700px]:flex-wrap max-[700px]:items-start max-[700px]:px-[6%] max-[700px]:py-[22px]"
+    >
+      <a
+        class="flex items-center font-display text-[1.65rem] font-normal tracking-normal max-[700px]:text-2xl"
+        href="/"
+        aria-label="anvian home"
+      >
+        <img
+          class="mr-2.5 size-9 object-contain [image-rendering:pixelated]"
+          src="/images/anvian_head.png"
+          alt=""
+          width="36"
+          height="36"
+        />
+        anvian<span class="text-green">.</span>
+      </a>
+      <nav
+        class="flex gap-8 font-display text-[.95rem] max-[700px]:gap-5 max-[700px]:text-[.88rem] [&_a]:inline-flex [&_a]:items-center [&_a]:gap-2 [&_a]:py-2 [&_a]:text-muted [&_a:hover]:text-green [&_a[aria-current=page]]:text-text [&_a[aria-current=page]]:shadow-[0_2px_var(--color-green)]"
+        aria-label="Main navigation"
+      >
+        {
+          [
+            ['/', 'Home'],
+            ['/projects/', 'Projects'],
+            ['/blog/', 'Blog'],
+          ].map(([url, label]) => (
+            <a
+              href={url}
+              aria-current={Astro.url.pathname === url ? 'page' : undefined}
+            >
+              <svg
+                class="size-4 shrink-0"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+                fill="currentColor"
+                shape-rendering="crispEdges"
+              >
+                {label === 'Home' ? (
+                  <path d="M7 1h2v2h2v2h2v2h2v2h-2v6H9v-4H7v4H3V9H1V7h2V5h2V3h2Z" />
+                ) : label === 'Projects' ? (
+                  <path d="M1 2h6v2h8v10H1Zm2 4v6h10V6Z" fill-rule="evenodd" />
+                ) : (
+                  <path
+                    d="M2 1h12v14H2Zm2 2v10h8V3Zm1 2h6v2H5Zm0 4h6v2H5Z"
+                    fill-rule="evenodd"
+                  />
+                )}
+              </svg>
+              {label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer
+      class="mx-auto grid max-w-[1440px] grid-cols-2 gap-4 border-t border-line px-[5%] py-10 max-[700px]:grid-cols-1 max-[700px]:px-[6%] max-[700px]:py-8 [&>div]:flex [&>div]:flex-wrap [&>div]:gap-6 [&>div]:text-[.85rem] [&>div_a]:inline-flex [&>div_a]:items-center [&>div_a]:gap-1.5 [&>p]:m-0 [&>p]:text-right max-[700px]:[&>p]:text-left [&>small]:text-right [&>small]:text-xs [&>small]:leading-[1.5] [&>small]:text-muted max-[700px]:[&>small]:text-left"
+    >
+      <a
+        class="flex items-center font-display text-[1.65rem] font-normal tracking-normal max-[700px]:text-2xl"
+        href="/"
+      >
+        anvian.
+      </a>
+      <p>Made for a world worth exploring.</p>
+      <div>
+        <a href="https://github.com/anviaan">
+          <PlatformIcon name="github" />
+          GitHub
+        </a>
+        <a href="https://modrinth.com/user/anvian">
+          <PlatformIcon name="modrinth" />
+          Modrinth
+        </a>
+        <a href="https://www.curseforge.com/members/anvian/projects">
+          <PlatformIcon name="curseforge" />
+          CurseForge
+        </a>
+        <a href="https://x.com/carbajal_andre">
+          <PlatformIcon name="x" />X
+        </a>
+        <a href="https://maven.anvian.net/">
+          <PlatformIcon name="maven" />
+          Maven
+        </a>
+        <a href="/rss.xml">
+          <svg
+            class="size-4 shrink-0 fill-current"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="5" cy="19" r="2"></circle>
+            <path
+              d="M3 3v3a15 15 0 0 1 15 15h3A18 18 0 0 0 3 3Zm0 6v3a9 9 0 0 1 9 9h3A12 12 0 0 0 3 9Z"
+            ></path>
+          </svg>
+          RSS
+        </a>
+      </div>
+      <small>Not affiliated with Mojang Studios or Microsoft.</small>
+    </footer>
+  </body>
+</html>

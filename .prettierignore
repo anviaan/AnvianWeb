@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+bun.lock
+.env*
+artifacts/
+src/data/projects.json
+src/data/blog/
+public/
