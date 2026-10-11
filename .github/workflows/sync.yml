@@ -27,7 +27,6 @@ jobs:
       - run: bun run format:check
       - run: bun test && bun run check && bun run build && bun scripts/smoke.ts
       - name: Commit the usable snapshot
-        id: commit
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -35,16 +34,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'chore: refresh project catalog'
             git push
-            echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
-      # GITHUB_TOKEN pushes do not trigger other workflows or all provider webhooks.
-      - name: Trigger Dokploy explicitly
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          DOKPLOY_URL: ${{ secrets.DOKPLOY_URL }}
-          DOKPLOY_API_KEY: ${{ secrets.DOKPLOY_API_KEY }}
-          DOKPLOY_APPLICATION_ID: ${{ secrets.DOKPLOY_APPLICATION_ID }}
-        run: bun scripts/deploy.ts
       - name: Report incomplete synchronization
         if: steps.sync.outcome == 'failure'
         run: |
