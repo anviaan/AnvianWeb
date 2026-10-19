@@ -25,12 +25,5 @@ jobs:
           sleep 3
           curl --fail http://localhost:8080/projects/
           test "$(curl -s -o /dev/null -w '%{http_code}' -H 'Host: blog.anvian.net' http://localhost:8080/posts/mcmodtest/)" = 301
-          check_redirect() {
-            method="$1"; path="$2"; expected="$3"; shift 3
-            headers="$(curl -sS -D - -o /dev/null -X "$method" "$@" -H 'Host: anvian.net' "http://localhost:8080$path")"
-            printf '%s\n' "$headers" | tr -d '\r' | grep -q '^HTTP/1.1 308 '
-            printf '%s\n' "$headers" | tr -d '\r' | grep -Fqi "Location: $expected"
-          }
-          check_redirect GET '/telemetry/mods?source=tui' 'https://telemetry.anvian.net/mods?source=tui'
-          check_redirect POST '/telemetry/data?source=mod' 'https://telemetry.anvian.net/data?source=mod' --data '{"mod_id":"test"}' -H 'Content-Type: application/json'
-          check_redirect GET '/telemetry/export/stats?period=2026-07' 'https://telemetry.anvian.net/export/stats?period=2026-07'
+          test "$(curl -sS -o /dev/null -w '%{http_code}' -H 'Host: anvian.net' http://localhost:8080/telemetry/health)" = 200
+          test "$(curl -sS -o /dev/null -w '%{http_code}' -X POST -H 'Host: anvian.net' -H 'Content-Type: application/json' --data '{"mod_id":"__ci_unknown_mod__","mod_version":"0.0.0","game_version":"0.0.0","loader":"ci"}' http://localhost:8080/telemetry/data)" = 404
